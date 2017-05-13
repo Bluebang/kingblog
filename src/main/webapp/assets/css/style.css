@@ -14,7 +14,7 @@ body {
 }
 #search {
 	margin-top: 10px;
-	background-color: transparent;
+
 	
 }
 .carousel-inner img {
@@ -206,6 +206,10 @@ body {
 	#about p {
 		font-size: 14px;
 	}
+	.search-input-group{
+	width: 20%;
+	top:8px;
+	}
 }
 
 /* 中等屏幕（桌面显示器，大于等于992px） */
@@ -236,6 +240,11 @@ body {
 	}
 	#about p {
 		font-size: 15px;
+	}
+	.search-input-group{
+	width: 20%;
+	top:8px;
+	left: 130px;
 	}
 }
 
@@ -268,4 +277,28 @@ body {
 	#about p {
 		font-size: 16px;
 	}
+	.search-input-group{
+	width: 20%;
+	top:8px;
+	left: 370px;
+	}
+}
+
+
+
+.search-input-group .input-group-addon{
+background: white !important; 
+}
+.search-input-group .form-control{
+border-right:0; 
+box-shadow:0 0 0; 
+border-color:#ccc;
+}
+
+.search-input-group button{
+border:0;
+background:transparent;
+}
+.search-input-group input:focus + button{
+z-index:3;
 }
