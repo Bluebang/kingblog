@@ -8,7 +8,9 @@
 <link rel="stylesheet" type="text/css"
 	href="/assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-
+	### 模板函数安全调用，找到 css() 模板函数则调用，找不到则直接跳过
+	### 适合于部分页面在 layout.html 提供的 css 文件之外，还需额外添加 css 资源的应用场景
+	#@css?()
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -47,8 +49,22 @@
 		</div>
 	</div>
 	</nav>
+	<!-- 中部主体容器 -->
+	<div class="container">
+	#@main()
+	</div>
+	<!-- 底部 -->
+	<footer id="footer">
+	<div class="container">
+		<p>合作事宜 | 版权投诉</p>
+		<p>粤ICP 备12345678. © 2009-2016 小K部落. Powered by Bootstrap.</p>
+	</div>
+</footer>
 </body>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
+### 模板函数安全调用，找到 js() 模板函数则调用，找不到则直接跳过
+### 适合于部分页面在 layout.html 提供的 js 文件之外，还需额外添加 js 资源的应用场景
+#@js?()
 </html>
 #end
